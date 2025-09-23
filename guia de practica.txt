@@ -1,0 +1,21 @@
+Proceso de la cinta transportadora
+
+caracteristicas:
+
+1) mover la cinta transportadora usando el bit/pin MCT1
+2) por medio de un detector agarrar una pieza de la cinta a la mesa giratoria con un brazo neumatico
+3) un sensor inductivo nos permite identificar rotaciones de 90 grados en la mesa giratoria (activo en alto)
+4) usar el manipulador rotativo  y la electrovalvula para retirar las piezas de la mesa giratoria
+5) crear botones para arraque y parada del sistema
+
+pasos:
+- pulsar PA para iniciar la cinta, intervenir la cinta cuando el sensor optico detecte la pieza en buena posicion, deteniendo la cinta 
+- accionar el cilindro rotatorio en SAR (sentido de las agujas del reloj) hasta detectar que FCIZ se activo. despues de 1.5sg descender el brazo DES y nuevamente esperar 1.5sg antes de cerrar la pinza PIN
+- cuando se detecta la pinza cerrada por medio de SPIN se eleva el brazo apagando DES
+- al activar CEXT se retorna en SCAR (sentido contrario de las agujas del reloj) hasta que se activa FCD
+- se vuelve a activar DEs para descencer la pieza sonre la mesa giratoria para 2sg despues abrir la pinza apagando PIN. adicionalmente se vuelve a activar CEXT para devolver dicho brazo 
+- al momento de ver que SPIN se desactivo, se apaga DES, subiendo el brazo neumatico.
+- se enciende ROT para rotar la mesa en 180 grados, pasando por tres sensores que se encargan de clasificar las piezas entre metalicas, de color negro o de color blanco
+- se debe girar el manipulador hacia la izquierda accionando GIZQ hasta activar el FC1 el cual nos indica que se llego al final de la carrera
+- se acciona la electrovalvula VENT para atrapar a la pieza y pasados 2sg se gira el manipulador a la derecha accionando GDER hasta que se active el FC2
+- se debe apagar la electrovalvula VENT para soltar la pieza y asi esperar 3 segundos 
