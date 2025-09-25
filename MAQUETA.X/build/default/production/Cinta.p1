@@ -865,46 +865,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [p x EBTRB  =  OFF       ]
 "32 Cinta.c
-[; ;Cinta.c: 32: int blanca=0;
-[v _blanca `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 32: char blanca=0;
+[v _blanca `uc ~T0 @X0 1 e ]
 [i _blanca
--> 0 `i
+-> -> 0 `i `uc
 ]
 "33
-[; ;Cinta.c: 33: int negra=0;
-[v _negra `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 33: char negra=0;
+[v _negra `uc ~T0 @X0 1 e ]
 [i _negra
--> 0 `i
+-> -> 0 `i `uc
 ]
 "34
-[; ;Cinta.c: 34: int metalica=0;
-[v _metalica `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 34: char metalica=0;
+[v _metalica `uc ~T0 @X0 1 e ]
 [i _metalica
--> 0 `i
+-> -> 0 `i `uc
 ]
 "35
-[; ;Cinta.c: 35: int banderaN=0;
-[v _banderaN `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 35: char banderaN=0;
+[v _banderaN `uc ~T0 @X0 1 e ]
 [i _banderaN
--> 0 `i
+-> -> 0 `i `uc
 ]
 "36
-[; ;Cinta.c: 36: int banderaB=0;
-[v _banderaB `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 36: char banderaB=0;
+[v _banderaB `uc ~T0 @X0 1 e ]
 [i _banderaB
--> 0 `i
+-> -> 0 `i `uc
 ]
 "37
-[; ;Cinta.c: 37: int banderaM=0;
-[v _banderaM `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 37: char banderaM=0;
+[v _banderaM `uc ~T0 @X0 1 e ]
 [i _banderaM
--> 0 `i
+-> -> 0 `i `uc
 ]
 "38
-[; ;Cinta.c: 38: int escena=0;
-[v _escena `i ~T0 @X0 1 e ]
+[; ;Cinta.c: 38: char escena=0;
+[v _escena `uc ~T0 @X0 1 e ]
 [i _escena
--> 0 `i
+-> -> 0 `i `uc
 ]
 "40
 [; ;Cinta.c: 40: void mostrar_variable(int x){
@@ -1084,7 +1084,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "87
 [; ;Cinta.c: 87:     if(escena==1){
-[e $ ! == _escena -> 1 `i 410  ]
+[e $ ! == -> _escena `i -> 1 `i 410  ]
 {
 "88
 [; ;Cinta.c: 88:     Lcd_Write_String("Inicializando");
@@ -1095,7 +1095,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 410 ]
 "90
 [; ;Cinta.c: 90:     if(escena==2){
-[e $ ! == _escena -> 2 `i 411  ]
+[e $ ! == -> _escena `i -> 2 `i 411  ]
 {
 "91
 [; ;Cinta.c: 91:     Lcd_Write_String("START");
@@ -1106,7 +1106,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 411 ]
 "93
 [; ;Cinta.c: 93:     if(escena==3){
-[e $ ! == _escena -> 3 `i 412  ]
+[e $ ! == -> _escena `i -> 3 `i 412  ]
 {
 "94
 [; ;Cinta.c: 94:     Lcd_Write_String("CINTA");
@@ -1117,7 +1117,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 412 ]
 "96
 [; ;Cinta.c: 96:     if(escena==4){
-[e $ ! == _escena -> 4 `i 413  ]
+[e $ ! == -> _escena `i -> 4 `i 413  ]
 {
 "97
 [; ;Cinta.c: 97:     Lcd_Write_String("PINZA");
@@ -1128,7 +1128,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 413 ]
 "99
 [; ;Cinta.c: 99:     if(escena==5){
-[e $ ! == _escena -> 5 `i 414  ]
+[e $ ! == -> _escena `i -> 5 `i 414  ]
 {
 "100
 [; ;Cinta.c: 100:     Lcd_Write_String("PLATO");
@@ -1139,7 +1139,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 414 ]
 "102
 [; ;Cinta.c: 102:     if(escena==6){
-[e $ ! == _escena -> 6 `i 415  ]
+[e $ ! == -> _escena `i -> 6 `i 415  ]
 {
 "103
 [; ;Cinta.c: 103:     Lcd_Write_String("CINTA");
@@ -1153,11 +1153,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
 "106
 [; ;Cinta.c: 106:     if (escena>4){
-[e $ ! > _escena -> 4 `i 416  ]
+[e $ ! > -> _escena `i -> 4 `i 416  ]
 {
 "107
 [; ;Cinta.c: 107:     if(banderaN==1){
-[e $ ! == _banderaN -> 1 `i 417  ]
+[e $ ! == -> _banderaN `i -> 1 `i 417  ]
 {
 "108
 [; ;Cinta.c: 108:     Lcd_Write_String("NEGRA");
@@ -1168,7 +1168,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 417 ]
 "110
 [; ;Cinta.c: 110:     if(banderaM==1){
-[e $ ! == _banderaM -> 1 `i 418  ]
+[e $ ! == -> _banderaM `i -> 1 `i 418  ]
 {
 "111
 [; ;Cinta.c: 111:      Lcd_Write_String("METALICA");
@@ -1179,7 +1179,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 418 ]
 "113
 [; ;Cinta.c: 113:     if ((banderaM==0)&&(banderaN==0)) {
-[e $ ! && == _banderaM -> 0 `i == _banderaN -> 0 `i 419  ]
+[e $ ! && == -> _banderaM `i -> 0 `i == -> _banderaN `i -> 0 `i 419  ]
 {
 "114
 [; ;Cinta.c: 114:       Lcd_Write_String("BLANCA");
@@ -1214,19 +1214,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Lcd_Write_String (1 :s 12C ]
 "123
 [; ;Cinta.c: 123:     mostrar_variable(metalica);
-[e ( _mostrar_variable (1 _metalica ]
+[e ( _mostrar_variable (1 -> _metalica `i ]
 "124
 [; ;Cinta.c: 124:     Lcd_Write_String(" B:");
 [e ( _Lcd_Write_String (1 :s 13C ]
 "125
 [; ;Cinta.c: 125:     mostrar_variable(blanca);
-[e ( _mostrar_variable (1 _blanca ]
+[e ( _mostrar_variable (1 -> _blanca `i ]
 "126
 [; ;Cinta.c: 126:     Lcd_Write_String(" N:");
 [e ( _Lcd_Write_String (1 :s 14C ]
 "127
 [; ;Cinta.c: 127:     mostrar_variable(negra);
-[e ( _mostrar_variable (1 _negra ]
+[e ( _mostrar_variable (1 -> _negra `i ]
 "129
 [; ;Cinta.c: 129: }
 [e :UE 409 ]
@@ -1308,7 +1308,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "154
 [; ;Cinta.c: 154:     escena=1;
-[e = _escena -> 1 `i ]
+[e = _escena -> -> 1 `i `uc ]
 "155
 [; ;Cinta.c: 155:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1320,7 +1320,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "158
 [; ;Cinta.c: 158:     escena=2;
-[e = _escena -> 2 `i ]
+[e = _escena -> -> 2 `i `uc ]
 "159
 [; ;Cinta.c: 159:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1336,7 +1336,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
 "163
 [; ;Cinta.c: 163:     escena=3;
-[e = _escena -> 3 `i ]
+[e = _escena -> -> 3 `i `uc ]
 "164
 [; ;Cinta.c: 164:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1349,7 +1349,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 430 ]
 "166
 [; ;Cinta.c: 166:     escena=4;
-[e = _escena -> 4 `i ]
+[e = _escena -> -> 4 `i `uc ]
 "167
 [; ;Cinta.c: 167:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1360,11 +1360,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Cinta.c: 169:     LATDbits.LATD2=1;
 [e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
 "170
-[; ;Cinta.c: 170:     while(PORTBbits.RB2==0);
+[; ;Cinta.c: 170:     while(PORTBbits.RB2==1);
 [e $U 431  ]
 [e :U 432 ]
 [e :U 431 ]
-[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 432  ]
+[e $ == -> . . _PORTBbits 0 2 `i -> 1 `i 432  ]
 [e :U 433 ]
 "171
 [; ;Cinta.c: 171:     LATDbits.LATD2=0;
@@ -1382,31 +1382,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Cinta.c: 175:     LATAbits.LA5=1;
 [e = . . _LATAbits 1 5 -> -> 1 `i `uc ]
 "176
-[; ;Cinta.c: 176:     while(PORTBbits.RB4==0);
+[; ;Cinta.c: 176:     while(PORTBbits.RB4==1);
 [e $U 434  ]
 [e :U 435 ]
 [e :U 434 ]
-[e $ == -> . . _PORTBbits 0 4 `i -> 0 `i 435  ]
+[e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 435  ]
 [e :U 436 ]
 "177
 [; ;Cinta.c: 177:     LATAbits.LA4=0;
 [e = . . _LATAbits 1 4 -> -> 0 `i `uc ]
 "178
-[; ;Cinta.c: 178:     while(PORTBbits.RB3==0);
+[; ;Cinta.c: 178:     while(PORTBbits.RB3==1);
 [e $U 437  ]
 [e :U 438 ]
 [e :U 437 ]
-[e $ == -> . . _PORTBbits 0 3 `i -> 0 `i 438  ]
+[e $ == -> . . _PORTBbits 0 3 `i -> 1 `i 438  ]
 [e :U 439 ]
 "179
 [; ;Cinta.c: 179:     LATDbits.LATD3=1;
 [e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
 "180
-[; ;Cinta.c: 180:     while(PORTBbits.RB1==0) ;
+[; ;Cinta.c: 180:     while(PORTBbits.RB1==1) ;
 [e $U 440  ]
 [e :U 441 ]
 [e :U 440 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 441  ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 1 `i 441  ]
 [e :U 442 ]
 "181
 [; ;Cinta.c: 181:     LATAbits.LA4=1;
@@ -1429,7 +1429,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 445 ]
 "186
 [; ;Cinta.c: 186:     escena=5;
-[e = _escena -> 5 `i ]
+[e = _escena -> -> 5 `i `uc ]
 "187
 [; ;Cinta.c: 187:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1437,11 +1437,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Cinta.c: 188:     LATAbits.LA4=0;
 [e = . . _LATAbits 1 4 -> -> 0 `i `uc ]
 "189
-[; ;Cinta.c: 189:     while(PORTBbits.RB3==0);
+[; ;Cinta.c: 189:     while(PORTBbits.RB3==1);
 [e $U 446  ]
 [e :U 447 ]
 [e :U 446 ]
-[e $ == -> . . _PORTBbits 0 3 `i -> 0 `i 447  ]
+[e $ == -> . . _PORTBbits 0 3 `i -> 1 `i 447  ]
 [e :U 448 ]
 "190
 [; ;Cinta.c: 190:     LATAbits.LA6=1;
@@ -1455,40 +1455,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 450 ]
 {
 "193
-[; ;Cinta.c: 193:         while (PORTBbits.RB5==1);
+[; ;Cinta.c: 193:         while (PORTBbits.RB5==0);
 [e $U 452  ]
 [e :U 453 ]
 [e :U 452 ]
-[e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 453  ]
+[e $ == -> . . _PORTBbits 0 5 `i -> 0 `i 453  ]
 [e :U 454 ]
 "195
-[; ;Cinta.c: 195:         if((PORTBbits.RB7==0)&&(PORTAbits.RA1==0)){
-[e $ ! && == -> . . _PORTBbits 0 7 `i -> 0 `i == -> . . _PORTAbits 0 1 `i -> 0 `i 455  ]
+[; ;Cinta.c: 195:         if((PORTBbits.RB7==1)&&(PORTAbits.RA1==1)){
+[e $ ! && == -> . . _PORTBbits 0 7 `i -> 1 `i == -> . . _PORTAbits 0 1 `i -> 1 `i 455  ]
 {
 "196
 [; ;Cinta.c: 196:             banderaN=1;
-[e = _banderaN -> 1 `i ]
+[e = _banderaN -> -> 1 `i `uc ]
 "198
 [; ;Cinta.c: 198:         }
 }
 [e :U 455 ]
 "199
-[; ;Cinta.c: 199:          if((PORTAbits.RA1==1)&&(PORTBbits.RB7==1)){
-[e $ ! && == -> . . _PORTAbits 0 1 `i -> 1 `i == -> . . _PORTBbits 0 7 `i -> 1 `i 456  ]
+[; ;Cinta.c: 199:          if((PORTAbits.RA1==0)&&(PORTBbits.RB7==0)){
+[e $ ! && == -> . . _PORTAbits 0 1 `i -> 0 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 456  ]
 {
 "200
 [; ;Cinta.c: 200:             banderaM=1;
-[e = _banderaM -> 1 `i ]
+[e = _banderaM -> -> 1 `i `uc ]
 "201
 [; ;Cinta.c: 201:          }
 }
 [e :U 456 ]
 "202
-[; ;Cinta.c: 202:         while(PORTBbits.RB5==0);
+[; ;Cinta.c: 202:         while(PORTBbits.RB5==1);
 [e $U 457  ]
 [e :U 458 ]
 [e :U 457 ]
-[e $ == -> . . _PORTBbits 0 5 `i -> 0 `i 458  ]
+[e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 458  ]
 [e :U 459 ]
 "203
 [; ;Cinta.c: 203:         giro++;
@@ -1503,33 +1503,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 451 ]
 "205
 [; ;Cinta.c: 205:     if(banderaN==1){
-[e $ ! == _banderaN -> 1 `i 460  ]
+[e $ ! == -> _banderaN `i -> 1 `i 460  ]
 {
 "206
 [; ;Cinta.c: 206:         negra++;
-[e ++ _negra -> 1 `i ]
+[e ++ _negra -> -> 1 `i `uc ]
 "207
 [; ;Cinta.c: 207:     }
 }
 [e :U 460 ]
 "208
 [; ;Cinta.c: 208:     if(banderaM==1){
-[e $ ! == _banderaM -> 1 `i 461  ]
+[e $ ! == -> _banderaM `i -> 1 `i 461  ]
 {
 "209
 [; ;Cinta.c: 209:         metalica++;
-[e ++ _metalica -> 1 `i ]
+[e ++ _metalica -> -> 1 `i `uc ]
 "210
 [; ;Cinta.c: 210:     }
 }
 [e :U 461 ]
 "211
 [; ;Cinta.c: 211:     if((banderaM==0)&&(banderaN==0)){
-[e $ ! && == _banderaM -> 0 `i == _banderaN -> 0 `i 462  ]
+[e $ ! && == -> _banderaM `i -> 0 `i == -> _banderaN `i -> 0 `i 462  ]
 {
 "212
 [; ;Cinta.c: 212:         blanca++;
-[e ++ _blanca -> 1 `i ]
+[e ++ _blanca -> -> 1 `i `uc ]
 "213
 [; ;Cinta.c: 213:     }
 }
@@ -1544,18 +1544,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Cinta.c: 216:     LATCbits.LC0=1;
 [e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
 "217
-[; ;Cinta.c: 217:     while(PORTAbits.RA2==0);
+[; ;Cinta.c: 217:     while(PORTAbits.RA2==1);
 [e $U 463  ]
 [e :U 464 ]
 [e :U 463 ]
-[e $ == -> . . _PORTAbits 0 2 `i -> 0 `i 464  ]
+[e $ == -> . . _PORTAbits 0 2 `i -> 1 `i 464  ]
 [e :U 465 ]
 "218
 [; ;Cinta.c: 218:     LATCbits.LC0=0;
 [e = . . _LATCbits 1 0 -> -> 0 `i `uc ]
 "219
 [; ;Cinta.c: 219:     escena=6;
-[e = _escena -> 6 `i ]
+[e = _escena -> -> 6 `i `uc ]
 "220
 [; ;Cinta.c: 220:     mostrar_conteo();
 [e ( _mostrar_conteo ..  ]
@@ -1569,11 +1569,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Cinta.c: 223:     LATCbits.LC1=1;
 [e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
 "224
-[; ;Cinta.c: 224:     while(PORTAbits.RA3==0);
+[; ;Cinta.c: 224:     while(PORTAbits.RA3==1);
 [e $U 466  ]
 [e :U 467 ]
 [e :U 466 ]
-[e $ == -> . . _PORTAbits 0 3 `i -> 0 `i 467  ]
+[e $ == -> . . _PORTAbits 0 3 `i -> 1 `i 467  ]
 [e :U 468 ]
 "225
 [; ;Cinta.c: 225:     LATCbits.LC1=0;
@@ -1586,10 +1586,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 1 4 -> -> 0 `i `uc ]
 "228
 [; ;Cinta.c: 228:     banderaM=0;
-[e = _banderaM -> 0 `i ]
+[e = _banderaM -> -> 0 `i `uc ]
 "229
 [; ;Cinta.c: 229:     banderaN=0;
-[e = _banderaN -> 0 `i ]
+[e = _banderaN -> -> 0 `i `uc ]
 "230
 [; ;Cinta.c: 230:     return;
 [e $UE 424  ]

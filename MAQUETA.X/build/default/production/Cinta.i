@@ -6121,13 +6121,13 @@ void Lcd_CGRAM_Init(void);
 void Lcd_CGRAM_Close(void);
 # 5 "Cinta.c" 2
 # 32 "Cinta.c"
-int blanca=0;
-int negra=0;
-int metalica=0;
-int banderaN=0;
-int banderaB=0;
-int banderaM=0;
-int escena=0;
+char blanca=0;
+char negra=0;
+char metalica=0;
+char banderaN=0;
+char banderaB=0;
+char banderaM=0;
+char escena=0;
 
 void mostrar_variable(int x){
     char buffer[20];
@@ -6259,17 +6259,17 @@ void main(void){
     mostrar_conteo();
     LATDbits.LATD0=0;
     LATDbits.LATD2=1;
-    while(PORTBbits.RB2==0);
+    while(PORTBbits.RB2==1);
     LATDbits.LATD2=0;
     _delay((unsigned long)((1500)*(4000000/4000.0)));
     LATAbits.LA4=1;
     _delay((unsigned long)((1000)*(4000000/4000.0)));
     LATAbits.LA5=1;
-    while(PORTBbits.RB4==0);
+    while(PORTBbits.RB4==1);
     LATAbits.LA4=0;
-    while(PORTBbits.RB3==0);
+    while(PORTBbits.RB3==1);
     LATDbits.LATD3=1;
-    while(PORTBbits.RB1==0) ;
+    while(PORTBbits.RB1==1) ;
     LATAbits.LA4=1;
     LATDbits.LATD3=0;
     _delay((unsigned long)((2000)*(4000000/4000.0)));
@@ -6278,20 +6278,20 @@ void main(void){
     escena=5;
     mostrar_conteo();
     LATAbits.LA4=0;
-    while(PORTBbits.RB3==0);
+    while(PORTBbits.RB3==1);
     LATAbits.LA6=1;
     _delay((unsigned long)((50)*(4000000/4000.0)));
     while (giro < 2) {
-        while (PORTBbits.RB5==1);
+        while (PORTBbits.RB5==0);
 
-        if((PORTBbits.RB7==0)&&(PORTAbits.RA1==0)){
+        if((PORTBbits.RB7==1)&&(PORTAbits.RA1==1)){
             banderaN=1;
 
         }
-         if((PORTAbits.RA1==1)&&(PORTBbits.RB7==1)){
+         if((PORTAbits.RA1==0)&&(PORTBbits.RB7==0)){
             banderaM=1;
          }
-        while(PORTBbits.RB5==0);
+        while(PORTBbits.RB5==1);
         giro++;
     }
     if(banderaN==1){
@@ -6306,14 +6306,14 @@ void main(void){
      mostrar_conteo();
     LATAbits.LA6=0;
     LATCbits.LC0=1;
-    while(PORTAbits.RA2==0);
+    while(PORTAbits.RA2==1);
     LATCbits.LC0=0;
     escena=6;
     mostrar_conteo();
     LATCbits.LC6=1;
     _delay((unsigned long)((2000)*(4000000/4000.0)));
     LATCbits.LC1=1;
-    while(PORTAbits.RA3==0);
+    while(PORTAbits.RA3==1);
     LATCbits.LC1=0;
     _delay((unsigned long)((500)*(4000000/4000.0)));
     LATCbits.LC6=0;

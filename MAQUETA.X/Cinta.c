@@ -29,13 +29,13 @@
 #define SAR LATDbits.LATD2
 #define SCAR LATDbits.LATD3
 //#define OUT  LATDbits.LATD2
-int blanca=0;
-int negra=0;
-int metalica=0;
-int banderaN=0;
-int banderaB=0;
-int banderaM=0;
-int escena=0;
+char blanca=0;
+char negra=0;
+char metalica=0;
+char banderaN=0;
+char banderaB=0;
+char banderaM=0;
+char escena=0;
 //Para mostrar una variable
 void mostrar_variable(int x){
     char buffer[20];
@@ -167,17 +167,17 @@ void main(void){
     mostrar_conteo();
     MCT=0;
     SAR=1;              //Activamos girar con las agujas del reloj
-    while(FCIZ==0);     //Hasta que el brazo efectivamente llegue a la izquierda
+    while(FCIZ==1);     //Hasta que el brazo efectivamente llegue a la izquierda
     SAR=0;          
     __delay_ms(1500);   //Esperamos 1.5sg para descender
     DES=1;
     __delay_ms(1000);   // encendemos la pinza
     PIN=1;
-    while(SPIN==0);    // esperamos a que la pinza este cerrada
+    while(SPIN==1);    // esperamos a que la pinza este cerrada
     DES=0;              // apagamos el des, para que el cilindro se extienda
-    while(CEXT==0);    // esperamos que el cilindro este extendido
+    while(CEXT==1);    // esperamos que el cilindro este extendido
     SCAR=1;             // Activamos el giro en contra de las manecillas del reloj
-    while(FCD==0) ;     //esperamos a que la pinza llegue a su destino
+    while(FCD==1) ;     //esperamos a que la pinza llegue a su destino
     DES=1;              //Bajamos el cilindro
     SCAR=0;
     __delay_ms(2000);
@@ -186,20 +186,20 @@ void main(void){
     escena=5; //PLATO
     mostrar_conteo();
     DES=0;              // esperamos que spin, se desactive para subir el cilindro
-    while(CEXT==0);     //Esperamos a que el cilindro se extienda
+    while(CEXT==1);     //Esperamos a que el cilindro se extienda
     ROT=1;              //Encendemos la mesa rotatoria
     __delay_ms(50);
     while (giro < 2) {  //entramos esperando que se cumplan 180 grados
-        while (D90==1); // esperamos que se desactive
+        while (D90==0); // esperamos que se desactive
         
-        if((OPT2==0)&&(IND==0)){
+        if((OPT2==1)&&(IND==1)){
             banderaN=1;
             
         }
-         if((IND==1)&&(OPT2==1)){
+         if((IND==0)&&(OPT2==0)){
             banderaM=1;
          }       
-        while(D90==0);  // esperamos que D90 se active
+        while(D90==1);  // esperamos que D90 se active
         giro++;         // contamos una, osea 90 grados
     }                   // saldra cuando gire 180 grados, osea que el conteo se haga dos veces
     if(banderaN==1){
@@ -214,14 +214,14 @@ void main(void){
      mostrar_conteo();
     ROT=0;
     GIZQ=1;            
-    while(FC1==0);  //Activamos el giro a la izquiera y esperamos el FC1
+    while(FC1==1);  //Activamos el giro a la izquiera y esperamos el FC1
     GIZQ=0;
     escena=6; //brazo
     mostrar_conteo();
     VENT=1;
     __delay_ms(2000);
     GDER=1;
-    while(FC2==0);  //Activamos el giro a la derecha y esperamos el FC2
+    while(FC2==1);  //Activamos el giro a la derecha y esperamos el FC2
     GDER=0;
     __delay_ms(500);
     VENT=0;
