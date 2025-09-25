@@ -3,15 +3,15 @@
 
 #define USE_CGRAM_LCD
 
-#define RS LATDbits.LD2
-#define EN LATDbits.LD3
+#define EN LATEbits.LE0
+#define RS LATEbits.LE1
 #define D4 LATDbits.LD4
 #define D5 LATDbits.LD5
 #define D6 LATDbits.LD6
 #define D7 LATDbits.LD7
 
-#define RS_DIR TRISDbits.TRISD2
-#define EN_DIR TRISDbits.TRISD3
+#define EN_DIR TRISEbits.TRISE0
+#define RS_DIR TRISEbits.TRISE1
 #define D4_DIR TRISDbits.TRISD4
 #define D5_DIR TRISDbits.TRISD5
 #define D6_DIR TRISDbits.TRISD6

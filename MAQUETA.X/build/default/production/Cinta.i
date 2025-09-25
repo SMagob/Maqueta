@@ -6120,10 +6120,14 @@ void Lcd_CGRAM_CreateChar(char add, const char* chardata);
 void Lcd_CGRAM_Init(void);
 void Lcd_CGRAM_Close(void);
 # 5 "Cinta.c" 2
-# 37 "Cinta.c"
+# 32 "Cinta.c"
 int blanca=0;
 int negra=0;
 int metalica=0;
+int banderaN=0;
+int banderaB=0;
+int banderaM=0;
+int escena=0;
 
 void mostrar_variable(int x){
     char buffer[20];
@@ -6134,46 +6138,85 @@ void mostrar_variable(int x){
 void init_ports(){
      ADCON1bits.PCFG=0x0F;
      TRISB=0XFF;
-     TRISA=0X00;
+     TRISA=0b00001111;
      LATA=0X00;
      TRISD=0X00;
      TRISE=0X00;
-     TRISEbits.RE0=1;
      LATE=0;
-     TRISC=0XFF;
+     TRISC=0X00;
+     TRISCbits.RC7=1;
      return;
 }
 void init_int(){
     INTCONbits.GIEH=0;
     INTCONbits.GIEL=0;
-    INTCONbits.RBIE=1;
+    INTCONbits.RBIE=0;
     INTCONbits.RBIF=0;
-    RCONbits.IPEN=1;
+    RCONbits.IPEN=0;
     INTCON2bits.RBIP=0;
 }
 void init_maqueta(){
-    if(PORTCbits.RC0!=1){
-        LATAbits.LA3=1;
-        while(PORTCbits.RC0==0);
-        LATAbits.LA3=0;
+    if(PORTBbits.RB5!=1){
+        LATAbits.LA6=1;
+        while(PORTBbits.RB5==0);
+        LATAbits.LA6=0;
     }
-    if(PORTBbits.RB2!=1){
-        LATAbits.LA0=1;
-         while(PORTBbits.RB2==0);
-         LATAbits.LA0=0;
+    if(PORTBbits.RB1!=1){
+        LATDbits.LATD3=1;
+         while(PORTBbits.RB1==0);
+         LATDbits.LATD3=0;
     }
-    if(PORTCbits.RC6!=1){
-        LATAbits.LA5=1;
-        while(PORTCbits.RC6==0);
-        LATAbits.LA5=0;
+    if(PORTAbits.RA3!=1){
+        LATCbits.LC1=1;
+        while(PORTAbits.RA3==0);
+        LATCbits.LC1=0;
     }
+
                     }
 void mostrar_conteo(){
-    Lcd_Write_String("Modulo");
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    if(escena==1){
+    Lcd_Write_String("Inicializando");
+    }
+    if(escena==2){
+    Lcd_Write_String("START");
+    }
+    if(escena==3){
+    Lcd_Write_String("CINTA");
+    }
+    if(escena==4){
+    Lcd_Write_String("PINZA");
+    }
+    if(escena==5){
+    Lcd_Write_String("PLATO");
+    }
+    if(escena==6){
+    Lcd_Write_String("CINTA");
+    }
     Lcd_Set_Cursor(2,1);
-    Lcd_Write_String("Blancas=");
+    if (escena>4){
+    if(banderaN==1){
+    Lcd_Write_String("NEGRA");
+    }
+    if(banderaM==1){
+     Lcd_Write_String("METALICA");
+    }
+    if ((banderaM==0)&&(banderaN==0)) {
+      Lcd_Write_String("BLANCA");
+    }
+    }
+    else{
+       Lcd_Write_String("NADA");
+    }
+    Lcd_Cmd(0x09);
+    Lcd_Cmd(0x00);
+    Lcd_Write_String("M:");
+    mostrar_variable(metalica);
+    Lcd_Write_String(" B:");
     mostrar_variable(blanca);
-    Lcd_Set_Cursor(3,0);
+    Lcd_Write_String(" N:");
+    mostrar_variable(negra);
 
 }
 
@@ -6187,16 +6230,6 @@ void __attribute__((picinterrupt(("low_priority")))) LowISR(void){
      if (INTCONbits.RBIF){
        volatile unsigned char dummy = PORTB;
         INTCONbits.RBIF=0;
-        if(PORTBbits.RB5==1){
-            negra++;
-
-        }
-         if(PORTBbits.RB7==1){
-            return;
-        }
-         if(PORTBbits.RB6==1){
-            return;
-        }
     }
     return;
 }
@@ -6209,48 +6242,82 @@ void main(void){
     Lcd_Cmd(0x00);
     _delay((unsigned long)((10)*(4000000/4000.0)));
     Lcd_Cmd(0x0E);
+    Lcd_Set_Cursor(1,1);
+    escena=1;
     mostrar_conteo();
     init_maqueta();
-    while(PORTBbits.RB0==0) ;
-    LATEbits.LATE1=1;
-    while(PORTBbits.RB1==0) ;
-    LATEbits.LATE1=0;
-    LATEbits.LATE2=1;
-    while(PORTBbits.RB3==0);
-    LATEbits.LATE2=0;
-    _delay((unsigned long)((1500)*(4000000/4000.0)));
-    LATAbits.LA1=1;
     _delay((unsigned long)((1000)*(4000000/4000.0)));
-    LATAbits.LA2=1;
-    while(PORTCbits.RC1==0);
-    LATAbits.LA1=0;
+    escena=2;
+    mostrar_conteo();
+
+    while(PORTBbits.RB0==0);
+    LATDbits.LATD0=1;
+    escena=3;
+    mostrar_conteo();
+    while(PORTCbits.RC7==0) ;
+    escena=4;
+    mostrar_conteo();
+    LATDbits.LATD0=0;
+    LATDbits.LATD2=1;
+    while(PORTBbits.RB2==0);
+    LATDbits.LATD2=0;
+    _delay((unsigned long)((1500)*(4000000/4000.0)));
+    LATAbits.LA4=1;
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    LATAbits.LA5=1;
     while(PORTBbits.RB4==0);
-    LATAbits.LA0=1;
-    while(PORTBbits.RB2==0) ;
-    LATAbits.LA1=1;
-    LATAbits.LA0=0;
+    LATAbits.LA4=0;
+    while(PORTBbits.RB3==0);
+    LATDbits.LATD3=1;
+    while(PORTBbits.RB1==0) ;
+    LATAbits.LA4=1;
+    LATDbits.LATD3=0;
     _delay((unsigned long)((2000)*(4000000/4000.0)));
-    LATAbits.LA2=0;
-    while(PORTCbits.RC1==1);
-    LATAbits.LA1=0;
-    while(PORTBbits.RB4==0);
-    LATAbits.LA3=1;
+    LATAbits.LA5=0;
+    while(PORTBbits.RB4==1);
+    escena=5;
+    mostrar_conteo();
+    LATAbits.LA4=0;
+    while(PORTBbits.RB3==0);
+    LATAbits.LA6=1;
     _delay((unsigned long)((50)*(4000000/4000.0)));
     while (giro < 2) {
-        while (PORTCbits.RC0==1);
-        while(PORTCbits.RC0==0);
+        while (PORTBbits.RB5==1);
+
+        if((PORTBbits.RB7==0)&&(PORTAbits.RA1==0)){
+            banderaN=1;
+
+        }
+         if((PORTAbits.RA1==1)&&(PORTBbits.RB7==1)){
+            banderaM=1;
+         }
+        while(PORTBbits.RB5==0);
         giro++;
     }
-    LATAbits.LA3=0;
-    LATAbits.LA4=1;
-    while(PORTCbits.RC2==0);
-    LATAbits.LA4=0;
-    LATAbits.LA6=1;
-    _delay((unsigned long)((2000)*(4000000/4000.0)));
-    LATAbits.LA5=1;
-    while(PORTCbits.RC6==0);
-    LATAbits.LA5=0;
-    _delay((unsigned long)((500)*(4000000/4000.0)));
+    if(banderaN==1){
+        negra++;
+    }
+    if(banderaM==1){
+        metalica++;
+    }
+    if((banderaM==0)&&(banderaN==0)){
+        blanca++;
+    }
+     mostrar_conteo();
     LATAbits.LA6=0;
+    LATCbits.LC0=1;
+    while(PORTAbits.RA2==0);
+    LATCbits.LC0=0;
+    escena=6;
+    mostrar_conteo();
+    LATCbits.LC6=1;
+    _delay((unsigned long)((2000)*(4000000/4000.0)));
+    LATCbits.LC1=1;
+    while(PORTAbits.RA3==0);
+    LATCbits.LC1=0;
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    LATCbits.LC6=0;
+    banderaM=0;
+    banderaN=0;
     return;
 }

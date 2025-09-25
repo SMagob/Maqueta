@@ -5937,11 +5937,11 @@ void Lcd_Port(char a)
 
 void Lcd_Cmd(char a)
 {
-    LATDbits.LD2 = 0;
+    LATEbits.LE1 = 0;
     Lcd_Port(a);
-    LATDbits.LD3 = 1;
+    LATEbits.LE0 = 1;
     _delay((unsigned long)((4)*(4000000/4000.0)));
-    LATDbits.LD3 = 0;
+    LATEbits.LE0 = 0;
 }
 
 void Lcd_Clear(void)
@@ -5989,8 +5989,8 @@ void Lcd_Set_Cursor(char a, char b)
 
 void Lcd_Init(void)
 {
- TRISDbits.TRISD2 = 0;
- TRISDbits.TRISD3 = 0;
+ TRISEbits.TRISE1 = 0;
+ TRISEbits.TRISE0 = 0;
  TRISDbits.TRISD4 = 0;
  TRISDbits.TRISD5 = 0;
  TRISDbits.TRISD6 = 0;
@@ -6017,15 +6017,15 @@ void Lcd_Write_Char(char a)
     char temp,y;
     temp = a&0x0F;
     y = a&0xF0;
-    LATDbits.LD2 = 1;
+    LATEbits.LE1 = 1;
     Lcd_Port(y>>4);
-    LATDbits.LD3 = 1;
+    LATEbits.LE0 = 1;
     _delay((unsigned long)((40)*(4000000/4000000.0)));
-    LATDbits.LD3 = 0;
+    LATEbits.LE0 = 0;
     Lcd_Port(temp);
-    LATDbits.LD3 = 1;
+    LATEbits.LE0 = 1;
     _delay((unsigned long)((40)*(4000000/4000000.0)));
-    LATDbits.LD3 = 0;
+    LATEbits.LE0 = 0;
 }
 
 void Lcd_Write_String(const char *a)
