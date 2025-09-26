@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o
+ C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o
  -Odist/default/production\MAQUETA.X.production.hex
  -logfile=dist/default/production\MAQUETA.X.production.hxl
  -addressing=1
@@ -9,40 +9,36 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
-  8h - Dh		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
-  18h - 3Dh		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
-  800h - 850h		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
-  852h - 148Bh		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
+  8h - 11h		(C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
+  800h - 884h		(C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
+  886h - 157Dh		(C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
-  Eh - 17h
-  3Eh - 7FFh
-  851h - 851h
-  148Ch - 2FFFFFh
+  12h - 7FFh
+  885h - 885h
+  157Eh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\Danie\AppData\Local\Temp\xcAsbf8.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\Danie\AppData\Local\Temp\xcAsf10.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
-00000000 | H1 H1 H1 H1 -- -- -- -- H1 H1 H1 H1 H1 H1 -- --
-00000010 | -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
-00000020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00000000 | H1 H1 H1 H1 -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00000010 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00000800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000850 | H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000860 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000870 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000880 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000880 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000890 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -234,7 +230,22 @@
 00001450 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001460 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001470 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00001480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000014F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001530 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001540 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001550 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001560 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001570 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

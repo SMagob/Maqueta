@@ -32,6 +32,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        __delay_ms(10);
         Lcd_Cmd(y);
     }
     else if(a == 2)
@@ -40,6 +41,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        __delay_ms(10);
         Lcd_Cmd(y);
     }
     else if(a == 3)
@@ -48,6 +50,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        __delay_ms(10);
         Lcd_Cmd(y);
     }
     else if(a == 4)
@@ -56,6 +59,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        __delay_ms(10);
         Lcd_Cmd(y);
     }
 }

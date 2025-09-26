@@ -1,17 +1,17 @@
 #include <xc.h>
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 1000000
 
 #define USE_CGRAM_LCD
 
-#define EN LATEbits.LE0
-#define RS LATEbits.LE1
+#define EN LATEbits.LE1
+#define RS LATEbits.LE0
 #define D4 LATDbits.LD4
 #define D5 LATDbits.LD5
 #define D6 LATDbits.LD6
 #define D7 LATDbits.LD7
 
-#define EN_DIR TRISEbits.TRISE0
-#define RS_DIR TRISEbits.TRISE1
+#define EN_DIR TRISEbits.TRISE1
+#define RS_DIR TRISEbits.TRISE0
 #define D4_DIR TRISDbits.TRISD4
 #define D5_DIR TRISDbits.TRISD5
 #define D6_DIR TRISDbits.TRISD6

@@ -1,10 +1,3 @@
-/* 
- * File:   CONFIG.h
- * Author: XXX
- *
- * Created on 24 de septiembre de 2025, 01:04 AM
- */
-
 #ifndef CONFI_H
 #define	CONFI_H
 #pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
@@ -20,7 +13,7 @@
 #pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
 #pragma config WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
 #pragma config CCP2MX = OFF     // CCP2 MUX bit (CCP2 input/output is multiplexed with RB3)
-#pragma config PBADEN = OFF     // PORTB A/D Enable bit (PORTB<4:0> pins are configured as digital I/O on Reset)
+#pragma config PBADEN = ON     // PORTB A/D Enable bit (PORTB<4:0> pins are configured as digital I/O on Reset)
 #pragma config LPT1OSC = OFF    // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)
 #pragma config MCLRE = OFF      // MCLR Pin Enable bit (RE3 input pin enabled; MCLR pin disabled)
 #pragma config STVREN = OFF     // Stack Full/Underflow Reset Enable bit (Stack full/underflow will not cause Reset)
@@ -45,5 +38,4 @@
 #pragma config EBTR2 = OFF      // Table Read Protection bit (Block 2 (004000-005FFFh) is not protected from table reads executed in other blocks)
 #pragma config EBTR3 = OFF      // Table Read Protection bit (Block 3 (006000-007FFFh) is not protected from table reads executed in other blocks)
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
-#endif	/* CONFIG_H */
-
+#endif	//* CONFIG_H *

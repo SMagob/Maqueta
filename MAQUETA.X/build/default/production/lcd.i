@@ -1,48 +1,48 @@
 # 1 "lcd.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
-# 285 "<built-in>" 3
+# 295 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "lcd.c" 2
 # 1 "./lcd.h" 1
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/xc8debug.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
 
 
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
-# 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/features.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef long int wchar_t;
-# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 128 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned size_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 174 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 210 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
 long atol (const char *);
@@ -68,7 +68,7 @@ unsigned long long strtoull (const char *restrict, char **restrict, int);
 unsigned long __strtoxl(const char * s, char ** endptr, int base, char is_signed);
 
 unsigned long long __strtoxll(const char * s, char ** endptr, int base, char is_signed);
-# 55 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
+# 55 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 3
 int rand (void);
 void srand (unsigned);
 
@@ -114,7 +114,7 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/xc8debug.h" 2 3
 
 
 
@@ -124,26 +124,26 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
-# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/builtins.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/builtins.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 1 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 1 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned __int24 uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef __int24 intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 164 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef signed char int8_t;
 
 
 
 
 typedef short int16_t;
-# 179 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 179 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef long int32_t;
 
 
@@ -151,7 +151,7 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
-# 194 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 194 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef long long intmax_t;
 
 
@@ -164,7 +164,7 @@ typedef unsigned char uint8_t;
 
 
 typedef unsigned short uint16_t;
-# 215 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 215 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned long uint32_t;
 
 
@@ -172,9 +172,9 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
-# 235 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+# 235 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
+# 27 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
 
 typedef int8_t int_fast8_t;
 
@@ -206,14 +206,14 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/stdint.h" 1 3
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/stdint.h" 1 3
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/builtins.h" 2 3
+# 149 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -235,7 +235,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
 
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(uint8_t);
-# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 
 
 
@@ -248,7 +248,7 @@ extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 5 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18.h" 2 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18_chip_select.h" 1 3
 # 339 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18_chip_select.h" 3
@@ -5897,7 +5897,7 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/errata.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/errata.h" 1 3
 # 24 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18.h" 2 3
 # 139 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
@@ -5906,7 +5906,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 # 175 "C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8\\pic\\include/pic18.h" 3
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
-# 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
+# 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 # 2 "./lcd.h" 2
 # 20 "./lcd.h"
 void Lcd_Port(char a);
@@ -5937,11 +5937,11 @@ void Lcd_Port(char a)
 
 void Lcd_Cmd(char a)
 {
-    LATEbits.LE1 = 0;
-    Lcd_Port(a);
-    LATEbits.LE0 = 1;
-    _delay((unsigned long)((4)*(4000000/4000.0)));
     LATEbits.LE0 = 0;
+    Lcd_Port(a);
+    LATEbits.LE1 = 1;
+    _delay((unsigned long)((4)*(1000000/4000.0)));
+    LATEbits.LE1 = 0;
 }
 
 void Lcd_Clear(void)
@@ -5959,6 +5959,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        _delay((unsigned long)((10)*(1000000/4000.0)));
         Lcd_Cmd(y);
     }
     else if(a == 2)
@@ -5967,6 +5968,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        _delay((unsigned long)((10)*(1000000/4000.0)));
         Lcd_Cmd(y);
     }
     else if(a == 3)
@@ -5975,6 +5977,7 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        _delay((unsigned long)((10)*(1000000/4000.0)));
         Lcd_Cmd(y);
     }
     else if(a == 4)
@@ -5983,24 +5986,25 @@ void Lcd_Set_Cursor(char a, char b)
         z = temp>>4;
         y = temp & 0x0F;
         Lcd_Cmd(z);
+        _delay((unsigned long)((10)*(1000000/4000.0)));
         Lcd_Cmd(y);
     }
 }
 
 void Lcd_Init(void)
 {
- TRISEbits.TRISE1 = 0;
  TRISEbits.TRISE0 = 0;
+ TRISEbits.TRISE1 = 0;
  TRISDbits.TRISD4 = 0;
  TRISDbits.TRISD5 = 0;
  TRISDbits.TRISD6 = 0;
  TRISDbits.TRISD7 = 0;
     Lcd_Port(0x00);
-    _delay((unsigned long)((20)*(4000000/4000.0)));
+    _delay((unsigned long)((20)*(1000000/4000.0)));
     Lcd_Cmd(0x03);
-    _delay((unsigned long)((5)*(4000000/4000.0)));
+    _delay((unsigned long)((5)*(1000000/4000.0)));
     Lcd_Cmd(0x03);
-    _delay((unsigned long)((11)*(4000000/4000.0)));
+    _delay((unsigned long)((11)*(1000000/4000.0)));
     Lcd_Cmd(0x03);
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x02);
@@ -6017,15 +6021,15 @@ void Lcd_Write_Char(char a)
     char temp,y;
     temp = a&0x0F;
     y = a&0xF0;
-    LATEbits.LE1 = 1;
+    LATEbits.LE0 = 1;
     Lcd_Port(y>>4);
-    LATEbits.LE0 = 1;
-    _delay((unsigned long)((40)*(4000000/4000000.0)));
-    LATEbits.LE0 = 0;
+    LATEbits.LE1 = 1;
+    _delay((unsigned long)((40)*(1000000/4000000.0)));
+    LATEbits.LE1 = 0;
     Lcd_Port(temp);
-    LATEbits.LE0 = 1;
-    _delay((unsigned long)((40)*(4000000/4000000.0)));
-    LATEbits.LE0 = 0;
+    LATEbits.LE1 = 1;
+    _delay((unsigned long)((40)*(1000000/4000000.0)));
+    LATEbits.LE1 = 0;
 }
 
 void Lcd_Write_String(const char *a)
